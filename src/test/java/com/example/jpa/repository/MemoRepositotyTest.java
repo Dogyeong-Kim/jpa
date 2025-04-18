@@ -27,7 +27,7 @@ public class MemoRepositotyTest {
     public void updateTest() {
         // Memo memo = Memo.builder().mno(1L).memoText("memoText update").build();
         Memo memo = memoRepository.findById(1L).get();
-        memo.setMemoText("memoText Update");
+        memo.changeMemoText("memoText Update");
         memoRepository.save(memo);
     }
 
@@ -39,6 +39,7 @@ public class MemoRepositotyTest {
 
     @Test
     public void listTest() {
+        // List<Memo>
         memoRepository.findAll().forEach(memo -> System.out.println(memo));
     }
 

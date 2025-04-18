@@ -15,7 +15,7 @@
   </head>
   <body>
     <div th:replace="~{fragments/header::header}"></div>
-    <main class="contaioner">
+    <main class="container">
       <th:block layout:fragment="section"></th:block>
       <div layout:fragment="content">
         <!-- 본문 영역 -->
@@ -27,7 +27,8 @@
       integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
       crossorigin="anonymous"
     ></script>
-    <th:block layout:fragment="scrip"></th:block>
-    <!-- 페이지마다 유동적인 영역 지정 -->
+    <th:block layout:fragment="scrip">
+      <!-- 페이지마다 유동적인 영역 지정 -->
+    </th:block>
   </body>
 </html>
