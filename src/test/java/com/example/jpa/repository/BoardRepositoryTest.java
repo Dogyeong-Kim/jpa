@@ -16,6 +16,28 @@ public class BoardRepositoryTest {
     private BoardRepository boardRepository;
 
     @Test
+    public void queryMethodTest() {
+
+        System.out.println(boardRepository.findByWriter("writer4"));
+        // System.out.println(boardRepository.findByTitle("title1"));
+        // System.out.println(boardRepository.findByWriterStartingWith("writer"));
+        // writer%
+        // System.out.println(boardRepository.findByWriterEndingWith("writer"));
+        // %writer
+        System.out.println(boardRepository.findByWriterContaining("writer"));
+        // %writer%
+
+        // System.out.println(boardRepository.findByWriterContainingOrContentContaining("5",
+        // "9"));
+        // System.out.println(boardRepository.findByWriterContainingAndContentContaining("5",
+        // "9"));
+        // System.out.println(boardRepository.findByBnoGreaterThan(5L));
+        // System.out.println(boardRepository.findByBnoGreaterThanOrderByBnoDesc(0L));
+        // System.out.println(boardRepository.findByBnoBetween(5L, 10L));
+    }
+
+    // CRUD
+    @Test
     public void insertTest() {
         LongStream.rangeClosed(0, 10).forEach(i -> {
             Board board = Board.builder().writer("writer" + i).title("title" + i)
